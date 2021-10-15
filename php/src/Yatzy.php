@@ -73,8 +73,8 @@ class Yatzy
     public static function twoPair(int $d1, int $d2, int $d3, int $d4, int $d5): int
     {
         $counts = self::getTallies($d1, $d2, $d3, $d4, $d5);
-        $n = 0;
-        $score = 0;
+        $n      = 0;
+        $score  = 0;
         for ($i = 0; $i !== 6; ++$i) {
             if ($counts[6 - $i - 1] >= 2) {
                 ++$n;
@@ -121,9 +121,9 @@ class Yatzy
 
     public static function fullHouse(int $d1, int $d2, int $d3, int $d4, int $d5): int
     {
-        $onePair = false;
-        $pair_at = 0;
-        $three = false;
+        $onePair  = false;
+        $pair_at  = 0;
+        $three    = false;
         $three_at = 0;
 
         $tallies = self::getTallies($d1, $d2, $d3, $d4, $d5);
@@ -134,7 +134,7 @@ class Yatzy
                 $pair_at = $i + 1;
             }
             if ($tallies[$i] === 3) {
-                $three = true;
+                $three    = true;
                 $three_at = $i + 1;
             }
         }
