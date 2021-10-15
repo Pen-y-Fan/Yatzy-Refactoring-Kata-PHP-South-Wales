@@ -28,8 +28,8 @@
     "scripts": {
         "checkcode": "phpcs src tests --standard=PSR12",
         "fixcode": "phpcbf src tests --standard=PSR12",
-        "test": "phpunit --colors=always",
-        "tests": "phpunit --colors=always",
+        "test": "phpunit --colors=always --testdox",
+        "tests": "phpunit --colors=always --testdox",
         "test-coverage": "phpunit --coverage-html build/coverage",
         "check-cs": "ecs check --ansi",
         "fix-cs": "ecs check --fix --ansi",
